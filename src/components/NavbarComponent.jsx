@@ -14,7 +14,7 @@ const NavbarComponent = ({toggleNavbar, mobileDrawerOpen}) => {
           <div className="flex justify-between items-center animate__animated animate__fadeInDown">
             <NavLink to="/">
               <div className="flex items-center flex-shrink-0">
-                <img className="h-10 w-full mr-2.5" src="/lumic-logo.png" alt="logo" />
+                <img className="h-10 w-auto mr-2.5" src="/lumic-logo.png" alt="logo" />
               </div>
             </NavLink>
             <ul className="hidden lg:flex ml-14 space-x-12">
