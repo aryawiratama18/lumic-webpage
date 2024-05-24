@@ -15,7 +15,7 @@ const IntroSection = () => {
           />
         </div>
         <div className="basis-1/2 ml-0 md:ml-6 mt-4 md:mt-0" data-aos="fade-up" data-aos-duration="1700">
-          <h2 className="text-xl md:text-2xl font-semibold">
+          <h2 className="text-xl md:text-2xl font-semibold text-primary-dark">
             Discover Electronic Shelf Labels (ESLs): Modernizing Price Tags
           </h2>
           <p className="text-sm md:text-sm lg:text-base mt-2">
@@ -32,13 +32,13 @@ const IntroSection = () => {
       <div className="flex mt-4 py-4 w-full px-4 md:px-0 md:w-auto justify-center" data-aos="fade-up" data-aos-duration="1900">
         <ButtonComponent
           href="/products"
-          className="bg-gradient-to-r from-primary-light to-primary-dark"
+          className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
         >
           Show More Products
         </ButtonComponent>
       </div>
       <div className="px-2 md:mt-20">
-        <h2 className="text-xl md:text-2xl font-semibold text-center py-2" data-aos="fade-up" data-aos-duration="1500">
+        <h2 className="text-xl md:text-2xl font-semibold text-primary-dark text-center py-2" data-aos="fade-up" data-aos-duration="1500">
           How it works ?
         </h2>
         <div className="flex justify-center bg-white rounded-md p-5" data-aos="zoom-in-up" data-aos-duration="1500">

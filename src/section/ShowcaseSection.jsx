@@ -35,7 +35,7 @@ const ShowcaseSection = () => {
       <div className="flex mt-4 py-4 w-full px-4 md:px-0 md:w-auto justify-center" data-aos="fade-up" data-aos-duration="1700">
         <ButtonComponent 
         href="/use-case"
-        className="bg-gradient-to-r from-primary-light to-primary-dark"
+        className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
         >Show More Case</ButtonComponent>
       </div>
     </div>

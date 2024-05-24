@@ -14,3 +14,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.funcDesc {
+  --animate-delay: 1.2s;
+}

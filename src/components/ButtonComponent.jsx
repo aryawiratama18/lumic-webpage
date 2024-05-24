@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const ButtonComponent = ({ href = null, onClick= null, children, className = '', type = 'button' }) => {
-  const commonClasses = `py-2 px-3 w-full md:w-auto text-center font-semibold rounded-md text-white ${className}`;
+  const commonClasses = `py-2 px-3 w-full md:w-auto text-center font-semibold rounded-md ${className}`;
 
   if (href) {
     return (

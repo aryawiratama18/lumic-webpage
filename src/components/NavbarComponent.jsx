@@ -26,7 +26,7 @@ const NavbarComponent = ({toggleNavbar, mobileDrawerOpen}) => {
                     ${
                       location.pathname === item.href
                         ? "text-primary border-b-2 border-primary"
-                        : ""
+                        : "text-primary-dark"
                     }
                     ml-1 pb-1 font-medium
                   `}
@@ -39,7 +39,7 @@ const NavbarComponent = ({toggleNavbar, mobileDrawerOpen}) => {
             <div className="hidden lg:flex justify-center space-x-12 items-center">
               <ButtonComponent
                 href="#contact"
-                className="bg-gradient-to-r from-primary-light to-primary-dark"
+                className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
               >
                 Contact Us
               </ButtonComponent>

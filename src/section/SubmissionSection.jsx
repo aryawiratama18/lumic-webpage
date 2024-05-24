@@ -97,7 +97,7 @@ const SubmissionSection = () => {
         <div className="flex justify-center mt-4">
           <ButtonComponent
             type="submit"
-            className={`bg-gradient-to-r from-secondary-light to-secondary-dark mt-4 ${
+            className={`bg-gradient-to-r from-secondary-light to-secondary-dark mt-4 text-white ${
               !isFormValid && "opacity-50 cursor-not-allowed"
             }`}
             onClick={handleSubmit}

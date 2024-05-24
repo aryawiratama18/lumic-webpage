@@ -11,9 +11,9 @@ const HomePage = () => {
       <IntroSection />
       <br />
       <ShowcaseSection />
-      <hr className="border-t-2 border-purple-500 my-4" />
+      <hr className="border-t-2 border-primary my-4" />
       <CustomersSection />
-      <hr className="border-t-2 border-purple-500 my-4" />
+      <hr className="border-t-2 border-primary my-4" />
       <br />
       <div id="contact">
         <SubmissionSection />

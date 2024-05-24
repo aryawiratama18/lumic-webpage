@@ -85,7 +85,7 @@ const App = () => {
                     ${
                       location.pathname === item.href
                         ? "text-primary border-b-2 border-primary"
-                        : ""
+                        : "text-primary-dark"
                     }
                     ml-1 pb-1 font-bold
                   `}
