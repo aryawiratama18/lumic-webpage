@@ -45,7 +45,7 @@ const IntroSection = () => {
         <h2 className="text-xl md:text-2xl font-semibold text-center py-2">
           How it works ?
         </h2>
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-white">
           <img
             src={cloudImg}
             alt="ESL Image 2"
