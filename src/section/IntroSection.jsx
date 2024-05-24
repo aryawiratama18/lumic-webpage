@@ -1,8 +1,8 @@
-import VideoComponent from "../components/VideoComponent";
-import introVideo from "../assets/zkong-esl-video.mp4";
 import eslImg from "../assets/ESL.png";
 import cloudImg from "../assets/zkong-cloud.png";
 import ButtonComponent from "../components/ButtonComponent";
+import introVideo from "../assets/zkong-esl-video.mp4";
+import VideoComponent from "../components/VideoComponent";
 
 const IntroSection = () => {
   return (
@@ -15,7 +15,7 @@ const IntroSection = () => {
           <img
             src={eslImg}
             alt="ESL Image 1"
-            className="max-w-xs md:max-w-lg lg:max-w-3xl object-contain"
+            className="w-xs md:w-lg lg:w-3xl object-contain"
           />
         </div>
         <div className="basis-1/2 ml-0 md:ml-6 mt-4 md:mt-0">
@@ -49,7 +49,7 @@ const IntroSection = () => {
           <img
             src={cloudImg}
             alt="ESL Image 2"
-            className="max-w-xs md:max-w-lg lg:max-w-3xl object-contain mt-6"
+            className="w-xs md:w-lg lg:w-3xl object-contain mt-6"
           />
         </div>
       </div>

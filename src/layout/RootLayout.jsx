@@ -50,10 +50,10 @@ const RootLayout = () => {
                       className={`
                     ${
                       location.pathname === item.href
-                        ? "text-amber-400 border-b-2 border-amber-400"
+                        ? "text-amber-600 border-b-2 border-amber-600"
                         : ""
                     }
-                    ml-1 pb-1 font-extrabold
+                    ml-1 pb-1 font-bold
                   `}
                     >
                       {item.label}
@@ -170,10 +170,10 @@ const RootLayout = () => {
                   className={`
                     ${
                       location.pathname === item.href
-                        ? "text-amber-400 border-b-2 border-amber-400"
+                        ? "text-amber-600 border-b-2 border-amber-600"
                         : ""
                     }
-                    ml-1 pb-1 font-extrabold
+                    ml-1 pb-1 font-bold
                   `}
                   onClick={toggleNavbar}
                 >
@@ -186,6 +186,7 @@ const RootLayout = () => {
             <ButtonComponent
               href="#contact"
               className="bg-gradient-to-r from-purple-400 to-purple-600"
+              onClick={toggleNavbar}
             >
               Contact Us
             </ButtonComponent>

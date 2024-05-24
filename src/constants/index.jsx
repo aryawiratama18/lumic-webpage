@@ -1,7 +1,7 @@
 // Case Studies Images
 import groceriesCase from "../assets/caseStudy/groceries-case.jpeg"
 import retailCase from "../assets/caseStudy/retail-case.jpg"
-import electronicCase from "../assets/caseStudy/electronic-case.png"
+import electronicCase from "../assets/caseStudy/electronic-case.jpg"
 
 // Customers Images
 import customer1 from "../assets/customers/carrefour.png"

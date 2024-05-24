@@ -1,8 +1,6 @@
-import groceryVideo from "../assets/zkong-esl-groceries.mp4";
 import CardComponent from "../components/CardComponent";
-import VideoComponent from "../components/VideoComponent";
 import ButtonComponent from "../components/ButtonComponent";
-import {caseStudy} from "../constants";
+import { caseStudy } from "../constants";
 
 const ShowcaseSection = () => {
   return (
@@ -11,13 +9,18 @@ const ShowcaseSection = () => {
         <div className="text-2xl md:text-3xl font-semibold mb-5 max-w-screen-md text-center text-white">
           ESL Usage in Grocery Market
         </div>
-        <VideoComponent
-          src={groceryVideo}
-          controls={true}
-          autoplay={false}
-          loop={false}
-          muted={false}
-        />
+        <div className="w-full max-w-screen-md">
+          <div className="relative overflow-hidden" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/lXBT7eVbBrk?si=BxTwS-_eN-BSYYI3"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col w-full md:w-auto md:flex-row justify-center items-center md:items-stretch mt-6 space-y-4 md:space-y-0 md:space-x-4">
         {caseStudy.map((item, index) => (
