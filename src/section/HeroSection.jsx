@@ -1,5 +1,4 @@
 import ButtonComponent from "../components/ButtonComponent";
-import introVideo from "../assets/zkong-esl-video.mp4";
 import VideoComponent from "../components/VideoComponent";
 
 const HeroSection = () => {
@@ -19,7 +18,7 @@ const HeroSection = () => {
           </ButtonComponent>
         </div>
         <div className="m-4 py-6 flex justify-center items-center animate__animated animate__fadeInBottomRight">
-        <VideoComponent src={introVideo} />
+        <VideoComponent src="/zkong-esl-video.mp4" />
       </div>
       </div>
     </div>
