@@ -33,7 +33,7 @@ const SubmissionSection = () => {
       }
   };
   return (
-    <div className="flex flex-col items-center justify-center rounded-md bg-gradient-to-r from-purple-400 to-purple-600 p-5">
+    <div className="flex flex-col items-center justify-center rounded-md bg-gradient-to-r from-secondary-light to-secondary-dark p-5">
       <div className="text-2xl md:text-3xl font-semibold mb-3 max-w-screen-md text-center text-white">
         Contact Us
       </div>
@@ -97,7 +97,7 @@ const SubmissionSection = () => {
         <div className="flex justify-center mt-4">
           <ButtonComponent
             type="submit"
-            className={`bg-gradient-to-r from-amber-400 to-amber-600 mt-4 ${
+            className={`bg-gradient-to-r from-secondary-light to-secondary-dark mt-4 ${
               !isFormValid && "opacity-50 cursor-not-allowed"
             }`}
             onClick={handleSubmit}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="18.6005mm" height="21.733mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 334 390"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:url(#id0)}
+    .fil1 {fill:url(#id1)}
+    .fil4 {fill:url(#id2)}
+    .fil5 {fill:url(#id3)}
+    .fil3 {fill:url(#id4)}
+    .fil0 {fill:url(#id5)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="292.111" y1="332.022" x2="142.457" y2="332.022">
+   <stop offset="0" style="stop-opacity:1; stop-color:darkviolet"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#440061"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="178.158" y1="208.111" x2="178.158" y2="25.7219">
+  </linearGradient>
+  <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="41.9696" y1="230.32" x2="62.1091" y2="331.08">
+   <stop offset="0" style="stop-opacity:1; stop-color:#C49000"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FFBD07"/>
+  </linearGradient>
+  <linearGradient id="id3" gradientUnits="userSpaceOnUse" x1="99.6444" y1="183.726" x2="121.061" y2="266.741">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FFBD07"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#CC9600"/>
+  </linearGradient>
+  <linearGradient id="id4" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="126.09" y1="351.356" x2="308.479" y2="351.356">
+  </linearGradient>
+  <linearGradient id="id5" gradientUnits="userSpaceOnUse" xlink:href="#id0" x1="158.825" y1="42.09" x2="158.825" y2="191.743">
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2546808518432">
+   <path class="fil0" d="M139 0l-39 0 0 117c0,64 53,117 117,117 0,0 -78,-70 -78,-234z"/>
+   <path class="fil1" d="M217 234l0 -234 -78 0c0,164 78,234 78,234z"/>
+   <path class="fil2" d="M334 312l0 -38 -117 0c-64,0 -117,52 -117,116 0,0 70,-78 234,-78z"/>
+   <path class="fil3" d="M334 390l0 -78c-164,0 -234,78 -234,78l234 0z"/>
+   <path class="fil4" d="M104 277c0,0 -31,-17 -44,-50 -15,16 -36,27 -60,27 44,0 81,36 81,80 0,-22 9,-42 23,-57z"/>
+   <path class="fil5" d="M60 227c13,33 44,50 44,50 15,-14 35,-23 57,-23 -44,0 -80,-36 -80,-81 0,21 -8,40 -21,54z"/>
+  </g>
+ </g>
+</svg>
