@@ -99,7 +99,7 @@ const App = () => {
           <div className="flex space-x-6">
             <ButtonComponent
               href="#contact"
-              className="bg-gradient-to-r from-primary-light to-primary-dark"
+              className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
               onClick={toggleNavbar}
             >
               Contact Us
