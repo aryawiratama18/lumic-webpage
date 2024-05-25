@@ -28,7 +28,7 @@ const ProductGalleriesSection = () => {
   };
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-4">
       <h1
         className="mb-6 font-medium text-center text-2xl text-primary-dark"
         data-aos="fade-up"
@@ -66,12 +66,12 @@ const ProductGalleriesSection = () => {
           ))}
         </div>
         <div className="flex flex-col esl-models w-full">
-          <div className="flex flex-row mb-4 justify-start">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 mb-4">
             {selectedCategory.types.map((item) => (
               <ButtonComponent
                 key={item.id}
                 onClick={() => handleItemClick(item)}
-                className={`mr-2 border-2 ${
+                className={`mr-2 border-2 text-xs sm:text-sm md:text-base ${
                   selectedItem.id === item.id
                     ? "border-primary text-primary"
                     : "border-gray-200 text-gray-500"
