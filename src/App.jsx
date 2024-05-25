@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <div>
-      <header className="sticky top-0 z-30 py-3 backdrop-blur-lg border-b border-neutral-700/80">
+      <header className="sticky top-0 z-30 py-3 backdrop-blur-lg border-b border-primary">
         <NavbarComponent
           toggleNavbar={toggleNavbar}
           mobileDrawerOpen={mobileDrawerOpen}
@@ -85,7 +85,7 @@ const App = () => {
                   className={`
                     ${
                       location.pathname === item.href
-                        ? "text-primary border-b-2 border-primary"
+                        ? "text-primary border-b-2 border-primary-dark"
                         : "text-primary-dark"
                     }
                     ml-1 pb-1 font-bold

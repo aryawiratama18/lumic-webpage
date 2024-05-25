@@ -19,6 +19,8 @@ import zkc21be4 from "../assets/products/esl/zkc21be4.png"
 // Dual Screen Series
 import zkc58vd from "../assets/products/esl/zkc58vd.png"
 import zkc58vdn from "../assets/products/esl/zkc58vdn.png"
+import zkc75vd from "../assets/products/esl/zkc75vd.png"
+import zkc75vdn from "../assets/products/esl/zkc75vdn.png"
 
 
 // Accessories
@@ -204,6 +206,34 @@ export const eslProducts = [
           screen: "118.8*88.2 mm",
           temperature: "0° ~ 40°C",
           battery: "2400 mAh",
+        },
+      },
+      {
+        id: 3,
+        shortName: "ZKC75V-D",
+        fullName: "ZKC75V-D | 7.5\" Dual Screen",
+        description: "Dot Matrix EPD Black/White/Red/Yellow",
+        image: zkc75vd,
+        spec: {
+          featureIcon: [nfc, removableBattery],
+          size: "180.2*121.2*13 mm",
+          screen: "163.2*98 mm",
+          temperature: "0° ~ 40°C",
+          battery: "3600 mAh",
+        },
+      },
+      {
+        id: 4,
+        shortName: "ZKC75V-DN",
+        fullName: "ZKC75V-DN | 7.5\" Screen",
+        description: "Dot Matrix EPD Black/White/Red/Yellow",
+        image: zkc75vdn,
+        spec: {
+          featureIcon: [nfc, removableBattery],
+          size: "180.2*121.2*13 mm",
+          screen: "163.2*98 mm",
+          temperature: "0° ~ 40°C",
+          battery: "3600 mAh",
         },
       },
     ],

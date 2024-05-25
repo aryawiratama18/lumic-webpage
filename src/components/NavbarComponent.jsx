@@ -30,7 +30,7 @@ const NavbarComponent = ({ toggleNavbar, mobileDrawerOpen }) => {
                     className={`
                     ${
                       location.pathname === item.href
-                        ? "text-primary border-b-2 border-primary"
+                        ? "text-primary border-b-2 border-primary-dark"
                         : "text-primary-dark"
                     }
                     ml-1 pb-1 font-medium
