@@ -1,5 +1,4 @@
 import ButtonComponent from "../components/ButtonComponent";
-import VideoComponent from "../components/VideoComponent";
 
 const HeroSection = () => {
   return (
@@ -13,13 +12,20 @@ const HeroSection = () => {
           efficiency, and enhanced customer experience.
         </h3>
         <div className="flex mt-4 py-4 w-full px-4 md:px-0 md:w-auto animate__animated animate__zoomIn animate__delay-1s">
-          <ButtonComponent href="#contact" className="bg-gradient-to-r from-primary-light to-primary-dark text-white">
+          <ButtonComponent
+            href="#contact"
+            className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
+          >
             Free Trial
           </ButtonComponent>
         </div>
         <div className="m-4 py-6 flex justify-center items-center animate__animated animate__fadeInBottomRight">
-        <VideoComponent src="/zkong-esl-video.mp4" />
-      </div>
+          <img
+            src="/zkong-esl-video.gif"
+            alt="Zkong Animation"
+            className="w-full max-w-md object-contain"
+          />
+        </div>
       </div>
     </div>
   );
