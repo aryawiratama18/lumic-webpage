@@ -12,7 +12,7 @@ const ProductsPage = () => {
       <hr className="border-t-2 border-primary my-4" />
       <ProductGalleriesSection />
       <br />
-      <div id="contact">
+      <div id="contact" className="relative pt-20 -mt-20">
         <SubmissionSection />
       </div>
     </div>

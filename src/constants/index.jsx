@@ -88,11 +88,11 @@ export const customers = [
 ];
 
 export const useCasesLink = [
-  { href: "/use-case/#fresh-food", text: "Fresh Food" },
   { href: "/use-case/#grocery", text: "Grocery" },
+  { href: "/use-case/#retail", text: "Retail" },
   { href: "/use-case/#electronics", text: "Electronics" },
-  { href: "/use-case/#pharmacy", text: "Pharmacy" },
   { href: "/use-case/#warehouse", text: "Warehouse" },
+  { href: "/use-case/#pharmacy", text: "Pharmacy" },
 ];
 
 export const eslFunctions = [

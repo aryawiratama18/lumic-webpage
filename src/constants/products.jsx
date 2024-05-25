@@ -22,6 +22,8 @@ import zkc58vdn from "../assets/products/esl/zkc58vdn.png"
 
 
 // Accessories
+import zapc from "../assets/products/accessories/zapc.png"
+import zapcpro from "../assets/products/accessories/zapcpro.png"
 
 
 // Feature Icons
@@ -207,3 +209,44 @@ export const eslProducts = [
     ],
   },
 ];
+
+export const accessoriesProducts = [
+  {
+    id: 1,
+    category: "Wireless Base Station",
+    types: [
+      {
+        id: 1,
+        shortName: "ZAP-C",
+        fullName: "ZAP-C (Ceiling)",
+        description: "Electronic shelf label transmission system equipment",
+        image: zapc,
+        spec: {
+          size: "180*180*33 mm",
+          temperature: "-10° ~ 60°C",
+          power: "48V POE",
+          weight: "500 gr",
+          frequency: "2.4GHz + 5 GHz",
+          wifiSpeed: "1167 Mbps",
+          coverage: "Indoor 30m radius"
+        }
+      },
+      {
+        id: 2,
+        shortName: "ZAP-C Pro",
+        fullName: "ZAP-C Pro (Ceiling)",
+        description: "BLE / Wi-Fi dual module wireless base station",
+        image: zapcpro,
+        spec: {
+          size: "215*215*39 mm",
+          temperature: "-10° ~ 60°C",
+          power: "48V POE",
+          weight: "500 gr",
+          frequency: "2.4GHz + 5 GHz",
+          wifiSpeed: "1167 Mbps",
+          coverage: "Indoor 30m radius"
+        }
+      }
+    ]
+  }
+]

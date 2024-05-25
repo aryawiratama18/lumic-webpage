@@ -1,5 +1,5 @@
 import { useCasesLink } from "../constants";
-import { NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import { Mail, PhoneCall, MapPinned } from "lucide-react";
 import lumicLogo from "../assets/lumic-logo-footer.png";
 
@@ -41,7 +41,7 @@ const FooterComponent = () => {
             <ul>
               {useCasesLink.map((item, index) => (
                 <li className="text-sm md:text-normal mb-1" key={index}>
-                  <NavLink to={item.href}>{item.text}</NavLink>
+                  <HashLink smooth to={item.href}>{item.text}</HashLink>
                 </li>
               ))}
             </ul>

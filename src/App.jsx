@@ -4,13 +4,14 @@ import UseCase from "./pages/UseCasePage";
 import AboutUs from "./pages/AboutUsPage";
 
 import { Routes, Route, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
 import ButtonComponent from "./components/ButtonComponent";
 
 import { navItems } from "./constants";
 import { useState, useEffect } from "react";
-import { ArrowUp} from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 const App = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -19,7 +20,6 @@ const App = () => {
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
-
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -37,20 +37,21 @@ const App = () => {
     };
   }, []);
 
-
   return (
     <div>
       <header className="sticky top-0 z-30 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-      <NavbarComponent toggleNavbar={toggleNavbar} mobileDrawerOpen={mobileDrawerOpen}/>
+        <NavbarComponent
+          toggleNavbar={toggleNavbar}
+          mobileDrawerOpen={mobileDrawerOpen}
+        />
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/use-case" element={<UseCase />} />
         <Route path="/about-us" element={<AboutUs />} />
       </Routes>
-      <FooterComponent/>
-
+      <FooterComponent />
 
       {showBackToTop && (
         <button
@@ -97,17 +98,17 @@ const App = () => {
             ))}
           </ul>
           <div className="flex space-x-6">
-            <ButtonComponent
-              href="#contact"
-              className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
-              onClick={toggleNavbar}
-            >
-              Contact Us
-            </ButtonComponent>
+            <HashLink smooth to="#contact">
+              <ButtonComponent
+                className="bg-gradient-to-r from-primary-light to-primary-dark text-white"
+                onClick={toggleNavbar}
+              >
+                Contact Us
+              </ButtonComponent>
+            </HashLink>
           </div>
         </div>
       </div>
-
     </div>
   );
 };
