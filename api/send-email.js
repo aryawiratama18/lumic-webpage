@@ -1,22 +1,24 @@
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default async (req, res) => {
     if (req.method === 'POST') {
         const { fullname, email, phone, company, message } = req.body;
-
         const transporter = nodemailer.createTransport({
-            host: 'smtppro.zoho.com',
+            host: 'smtp.zoho.com',
             port: 465,
-            secure: true, 
+            secure: true, // true for 465, false for other ports
             auth: {
-                user: 'support@lumic.id',
-                pass: 'iCrt&no2'
+                user: process.env.ZOHO_EMAIL,
+                pass: process.env.ZOHO_PASSWORD
             }
         });
 
         const mailOptions = {
-            from: '"Support Lumic" <support@lumic.id>',
-            to: `${email}, support@lumic.id`,
+            from: `"Support Lumic" <${process.env.ZOHO_EMAIL}>`,
+            to: `${email}, ${process.env.ZOHO_EMAIL}`,
             subject: 'Form Submission',
             text: `
                 Full Name: ${fullname}
