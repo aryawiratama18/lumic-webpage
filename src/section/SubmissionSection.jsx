@@ -2,6 +2,7 @@ import { useState } from "react";
 import InputFieldComponent from "../components/InputFieldComponent";
 import TextAreaComponent from "../components/TextAreaComponent";
 import ButtonComponent from "../components/ButtonComponent";
+import Swal from "sweetalert2";
 
 const SubmissionSection = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,8 @@ const SubmissionSection = () => {
     message: "",
   });
 
-  const isFormValid = formData.fullname && formData.email && formData.company && formData.message;
+  const isFormValid =
+    formData.fullname && formData.email && formData.company && formData.message;
   const [showTooltips, setShowTooltips] = useState(false);
 
   const handleChange = (e) => {
@@ -26,28 +28,38 @@ const SubmissionSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormValid) {
-        setShowTooltips(true);
-      } else {
-        try {
-            const response = await fetch('/api/send-email', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(formData)
-            });
-    
-            if (response.ok) {
-              console.log('Email sent successfully');
-            } else {
-              console.log('Failed to send email');
-            }
-          } catch (error) {
-            console.error('Error:', error);
-            console.log('Failed to send email');
-          }
-        console.log(formData);
+      setShowTooltips(true);
+    } else {
+      try {
+        const response = await fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Email sent successfully",
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Failed to send email",
+          });
+        }
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Failed to send email",
+        });
       }
+    }
   };
   return (
     <div className="flex flex-col items-center justify-center rounded-md bg-gradient-to-r from-secondary-light to-secondary-dark p-5">
