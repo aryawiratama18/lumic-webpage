@@ -7,7 +7,7 @@ export default async (req, res) => {
     if (req.method === 'POST') {
         const { fullname, email, phone, company, message } = req.body;
         const transporter = nodemailer.createTransport({
-            host: 'smtp.zoho.com',
+            host: 'smtppro.zoho.com',
             port: 465,
             secure: true, // true for 465, false for other ports
             auth: {
