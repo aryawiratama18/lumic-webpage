@@ -23,12 +23,29 @@ const SubmissionSection = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormValid) {
         setShowTooltips(true);
       } else {
-        // Add your form submission logic here
+        try {
+            const response = await fetch('/api/send-email', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            });
+    
+            if (response.ok) {
+              console.log('Email sent successfully');
+            } else {
+              console.log('Failed to send email');
+            }
+          } catch (error) {
+            console.error('Error:', error);
+            console.log('Failed to send email');
+          }
         console.log(formData);
       }
   };
