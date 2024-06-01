@@ -3,6 +3,10 @@ import InputFieldComponent from "../components/InputFieldComponent";
 import TextAreaComponent from "../components/TextAreaComponent";
 import ButtonComponent from "../components/ButtonComponent";
 import Swal from "sweetalert2";
+import withReactContent from 'sweetalert2-react-content';
+import Loader from "react-loader-spinner";
+
+const MySwal = withReactContent(Swal);
 
 const SubmissionSection = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +19,7 @@ const SubmissionSection = () => {
 
   const isFormValid =
     formData.fullname && formData.email && formData.company && formData.message;
+    const [isLoading, setIsLoading] = useState(false);
   const [showTooltips, setShowTooltips] = useState(false);
 
   const handleChange = (e) => {
@@ -30,37 +35,41 @@ const SubmissionSection = () => {
     if (!isFormValid) {
       setShowTooltips(true);
     } else {
+      setIsLoading(true);
       try {
-        const response = await fetch("/api/send-email", {
-          method: "POST",
+        const response = await fetch('/api/send-email', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
         });
 
         if (response.ok) {
-          Swal.fire({
-            icon: "success",
-            title: "Success",
-            text: "Email sent successfully",
+          MySwal.fire({
+            icon: 'success',
+            title: 'Sukses',
+            text: 'Email berhasil dikirim',
           });
         } else {
-          Swal.fire({
-            icon: "error",
-            title: "Error",
-            text: "Failed to send email",
+          MySwal.fire({
+            icon: 'error',
+            title: 'Kesalahan',
+            text: 'Gagal mengirim email',
           });
         }
       } catch (error) {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Failed to send email",
+        MySwal.fire({
+          icon: 'error',
+          title: 'Kesalahan',
+          text: 'Gagal mengirim email',
         });
+      } finally {
+        setIsLoading(false);
       }
     }
   };
+
   return (
     <div className="flex flex-col items-center justify-center rounded-md bg-gradient-to-r from-secondary-light to-secondary-dark p-5">
       <div className="text-2xl md:text-3xl font-semibold mb-3 max-w-screen-md text-center text-white">
@@ -130,9 +139,18 @@ const SubmissionSection = () => {
               !isFormValid && "opacity-50 cursor-not-allowed"
             }`}
             onClick={handleSubmit}
-            disabled={!isFormValid}
+            disabled={!isFormValid || isLoading}
           >
-            Submit
+            {isLoading ? (
+              <Loader
+                type="ThreeDots"
+                color="#FFFFFF"
+                height={24}
+                width={24}
+              />
+            ) : (
+              'Submit'
+            )}
           </ButtonComponent>
         </div>
       </form>

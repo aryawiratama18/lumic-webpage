@@ -23,7 +23,7 @@ export default async (req, res) => {
             text: `
             Yth. ${fullname},
 
-            Terima kasih telah menghubungi kami. Kami telah menerima pesan Anda dan tim kami akan segera menghubungi Anda. Kami menghargai kesabaran Anda.
+            Terima kasih telah menghubungi kami. Kami telah menerima pesan Anda dan tim kami akan segera menghubungi Anda.
     
             Hormat kami,
             Tim Lumic
