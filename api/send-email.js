@@ -16,11 +16,27 @@ export default async (req, res) => {
             }
         });
 
-        const mailOptions = {
+        const customerMailOptions = {
             from: `"Support Lumic" <${process.env.ZOHO_EMAIL}>`,
-            to: `${email}, ${process.env.ZOHO_EMAIL}`,
-            subject: 'Form Submission',
+            to: `${email}`,
+            subject: 'LUMIC - Terima Kasih Telah Menghubungi Kami',
             text: `
+            Yth. ${fullname},
+
+            Terima kasih telah menghubungi kami. Kami telah menerima pesan Anda dan tim kami akan segera menghubungi Anda. Kami menghargai kesabaran Anda.
+    
+            Hormat kami,
+            Tim Lumic
+            `
+        }
+
+        const supportMailOptions = {
+            from: `"Support Lumic" <${process.env.ZOHO_EMAIL}>`,
+            to: `${process.env.ZOHO_EMAIL}`,
+            subject: 'New Contact Form Submission',
+            text: `
+                You have received a new message from the contact form :
+
                 Full Name: ${fullname}
                 Email: ${email}
                 Phone: ${phone}
@@ -30,7 +46,8 @@ export default async (req, res) => {
         };
 
         try {
-            await transporter.sendMail(mailOptions);
+            await transporter.sendMail(customerMailOptions);
+            await transporter.sendMail(supportMailOptions);
             res.status(200).json({ message: 'Email sent successfully' });
         } catch (error) {
             res.status(500).json({ error: 'Failed to send email' });
