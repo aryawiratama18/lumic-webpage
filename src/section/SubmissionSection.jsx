@@ -4,7 +4,7 @@ import TextAreaComponent from "../components/TextAreaComponent";
 import ButtonComponent from "../components/ButtonComponent";
 import Swal from "sweetalert2";
 import withReactContent from 'sweetalert2-react-content';
-import Loader from "react-loader-spinner";
+import { ClipLoader } from "react-spinners";
 
 const MySwal = withReactContent(Swal);
 
@@ -54,14 +54,14 @@ const SubmissionSection = () => {
         } else {
           MySwal.fire({
             icon: 'error',
-            title: 'Kesalahan',
+            title: 'Gagal',
             text: 'Gagal mengirim email',
           });
         }
       } catch (error) {
         MySwal.fire({
           icon: 'error',
-          title: 'Kesalahan',
+          title: 'Gagal',
           text: 'Gagal mengirim email',
         });
       } finally {
@@ -142,12 +142,7 @@ const SubmissionSection = () => {
             disabled={!isFormValid || isLoading}
           >
             {isLoading ? (
-              <Loader
-                type="ThreeDots"
-                color="#FFFFFF"
-                height={24}
-                width={24}
-              />
+              <ClipLoader color="#FFFFFF" size={24} />
             ) : (
               'Submit'
             )}
