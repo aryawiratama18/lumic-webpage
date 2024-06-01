@@ -3,12 +3,14 @@ import InputFieldComponent from "../components/InputFieldComponent";
 import TextAreaComponent from "../components/TextAreaComponent";
 import ButtonComponent from "../components/ButtonComponent";
 import Swal from "sweetalert2";
-import withReactContent from 'sweetalert2-react-content';
-import { ClipLoader } from "react-spinners";
+import withReactContent from "sweetalert2-react-content";
+import { ScaleLoader } from "react-spinners";
 
 const MySwal = withReactContent(Swal);
 
 const SubmissionSection = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [showTooltips, setShowTooltips] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -19,8 +21,6 @@ const SubmissionSection = () => {
 
   const isFormValid =
     formData.fullname && formData.email && formData.company && formData.message;
-    const [isLoading, setIsLoading] = useState(false);
-  const [showTooltips, setShowTooltips] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,32 +37,40 @@ const SubmissionSection = () => {
     } else {
       setIsLoading(true);
       try {
-        const response = await fetch('/api/send-email', {
-          method: 'POST',
+        const response = await fetch("/api/send-email", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
 
         if (response.ok) {
           MySwal.fire({
-            icon: 'success',
-            title: 'Sukses',
-            text: 'Email berhasil dikirim',
+            icon: "success",
+            title: "Sukses",
+            text: "Email berhasil dikirim",
           });
+          setFormData({
+            fullname: "",
+            email: "",
+            phone: "",
+            company: "",
+            message: "",
+          });
+          window.scrollTo(0, 0);
         } else {
           MySwal.fire({
-            icon: 'error',
-            title: 'Gagal',
-            text: 'Gagal mengirim email',
+            icon: "error",
+            title: "Gagal",
+            text: "Gagal mengirim email",
           });
         }
       } catch (error) {
         MySwal.fire({
-          icon: 'error',
-          title: 'Gagal',
-          text: 'Gagal mengirim email',
+          icon: "error",
+          title: "Gagal",
+          text: "Gagal mengirim email",
         });
       } finally {
         setIsLoading(false);
@@ -141,11 +149,7 @@ const SubmissionSection = () => {
             onClick={handleSubmit}
             disabled={!isFormValid || isLoading}
           >
-            {isLoading ? (
-              <ClipLoader color="#FFFFFF" size={24} />
-            ) : (
-              'Submit'
-            )}
+            {isLoading ? <ScaleLoader color="#FFFFFF" size={24} /> : "Submit"}
           </ButtonComponent>
         </div>
       </form>
