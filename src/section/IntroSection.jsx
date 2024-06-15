@@ -16,6 +16,7 @@ const IntroSection = () => {
             src={eslImg}
             alt="ESL Image 1"
             className="w-xs md:w-lg lg:w-3xl object-contain"
+            loading="lazy"
           />
         </div>
         <div
@@ -65,6 +66,7 @@ const IntroSection = () => {
             src={cloudImg}
             alt="ESL Image 2"
             className="w-xs md:w-lg lg:w-3xl object-contain mt-6"
+            loading="lazy"
           />
         </div>
       </div>
