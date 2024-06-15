@@ -20,11 +20,15 @@ const HeroSection = () => {
           </ButtonComponent>
         </div>
         <div className="m-4 py-6 flex justify-center items-center animate__animated animate__fadeInBottomRight">
-          <img
-            src="/zkong-esl-video.gif"
+        <video
+            src="/zkong-esl-video.webm"
             alt="Zkong Animation"
             className="w-full max-w-md object-contain"
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
         </div>
       </div>
     </div>

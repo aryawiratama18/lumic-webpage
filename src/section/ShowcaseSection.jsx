@@ -2,6 +2,7 @@ import CardComponent from "../components/CardComponent";
 import ButtonComponent from "../components/ButtonComponent";
 import { caseStudy } from "../constants";
 import { NavLink } from "react-router-dom";
+import LazyLoad from "react-lazyload";
 
 const ShowcaseSection = () => {
   return (
@@ -15,19 +16,21 @@ const ShowcaseSection = () => {
           ESL Usage in Grocery Market
         </div>
         <div className="w-full max-w-screen-md">
-          <div
-            className="relative overflow-hidden"
-            style={{ paddingTop: "56.25%" }}
-          >
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/lXBT7eVbBrk?si=BxTwS-_eN-BSYYI3"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
+          <LazyLoad height={0} offset={100}>
+            <div
+              className="relative overflow-hidden"
+              style={{ paddingTop: "56.25%" }}
+            >
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/lXBT7eVbBrk?si=BxTwS-_eN-BSYYI3"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </LazyLoad>
         </div>
       </div>
       <div
