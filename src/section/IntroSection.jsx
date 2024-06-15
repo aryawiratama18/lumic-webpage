@@ -1,5 +1,5 @@
-import eslImg from "../assets/ESL.png";
-import cloudImg from "../assets/zkong-cloud.png";
+import eslImg from "../assets/ESL.webp";
+import cloudImg from "../assets/zkong-cloud.webp";
 import ButtonComponent from "../components/ButtonComponent";
 import { NavLink } from "react-router-dom";
 

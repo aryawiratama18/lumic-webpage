@@ -1,8 +1,8 @@
-import groceryImg from "../assets/caseStudy/groceryImg.jpeg"
-import retailImg from "../assets/caseStudy/retailImg.jpg"
-import electronicImg from "../assets/caseStudy/electronicImg.jpg"
-import warehouseImg from "../assets/caseStudy/warehouseImg.png"
-import pharmacyImg from "../assets/caseStudy/pharmacyImg.jpg"
+import groceryImg from "../assets/caseStudy/groceryImg.webp"
+import retailImg from "../assets/caseStudy/retailImg.webp"
+import electronicImg from "../assets/caseStudy/electronicImg.webp"
+import warehouseImg from "../assets/caseStudy/warehouseImg.webp"
+import pharmacyImg from "../assets/caseStudy/pharmacyImg.webp"
 
 export const useCases =[
     {

@@ -1,19 +1,19 @@
 // Case Studies Images
-import groceriesCase from "../assets/caseStudy/groceries-case.jpeg";
-import retailCase from "../assets/caseStudy/retail-case.jpg";
-import electronicCase from "../assets/caseStudy/electronic-case.jpg";
+import groceriesCase from "../assets/caseStudy/groceries-case.webp";
+import retailCase from "../assets/caseStudy/retail-case.webp";
+import electronicCase from "../assets/caseStudy/electronic-case.webp";
 
 // Customers Images
-import customer1 from "../assets/customers/carrefour.png";
-import customer2 from "../assets/customers/lotte.png";
-import customer3 from "../assets/customers/lenovo.png";
-import customer4 from "../assets/customers/vodafone.png";
-import customer5 from "../assets/customers/sony.png";
-import customer6 from "../assets/customers/7eleven.png";
-import customer7 from "../assets/customers/xiaomi.png";
-import customer8 from "../assets/customers/texas-instrument.png";
-import customer9 from "../assets/customers/pop-mart.png";
-import customer10 from "../assets/customers/mercedes-benz.png";
+import customer1 from "../assets/customers/carrefour.webp";
+import customer2 from "../assets/customers/lotte.webp";
+import customer3 from "../assets/customers/lenovo.webp";
+import customer4 from "../assets/customers/vodafone.webp";
+import customer5 from "../assets/customers/sony.webp";
+import customer6 from "../assets/customers/7eleven.webp";
+import customer7 from "../assets/customers/xiaomi.webp";
+import customer8 from "../assets/customers/texas-instrument.webp";
+import customer9 from "../assets/customers/pop-mart.webp";
+import customer10 from "../assets/customers/mercedes-benz.webp";
 
 
 export const navItems = [

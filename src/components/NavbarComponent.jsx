@@ -49,7 +49,7 @@ const NavbarComponent = ({ toggleNavbar, mobileDrawerOpen }) => {
               </HashLink>
             </div>
             <div className="lg:hidden md:flex flex-col justify-end">
-              <button onClick={toggleNavbar}>
+              <button onClick={toggleNavbar} aria-label="Menu">
                 {mobileDrawerOpen ? <X /> : <Menu />}
               </button>
             </div>
