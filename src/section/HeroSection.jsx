@@ -1,10 +1,23 @@
 import ButtonComponent from "../components/ButtonComponent";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [isFontLoaded, setFontLoaded] = useState(false);
+
+  useEffect(() => {
+    document.fonts.ready.then(() => {
+      setFontLoaded(true);
+    });
+  }, []);
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl text-primary-dark font-semibold mb-2 md:mt-20 max-w-screen-md text-center animate__animated animate__fadeInTopLeft">
+        <h1
+          className={`text-2xl md:text-4xl lg:text-5xl text-primary-dark font-semibold mb-2 md:mt-20 max-w-screen-md text-center ${
+            isFontLoaded ? "animate__animated animate__fadeInTopLeft" : ""
+          }`}
+        >
           Modernize retail labeling with our ESL revolution
         </h1>
         <h3 className="text-sm md:text-lg font-light max-w-screen-md text-center animate__animated animate__fadeInTopLeft animate__delay-1s">
@@ -20,7 +33,7 @@ const HeroSection = () => {
           </ButtonComponent>
         </div>
         <div className="m-4 py-6 flex justify-center items-center animate__animated animate__fadeInBottomRight">
-        <video
+          <video
             src="/zkong-esl-video.webm"
             alt="Zkong Animation"
             className="w-full max-w-md object-contain"
